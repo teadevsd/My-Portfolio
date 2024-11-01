@@ -11,6 +11,8 @@ import { MdLocationPin } from "react-icons/md";
 import { MdWork } from "react-icons/md";
 import { SlPaperClip } from "react-icons/sl";
 import shareicon from "../assets/png/share.png";
+import { FaCodeBranch } from "react-icons/fa6";
+import { HiOutlineDownload } from "react-icons/hi";
 
 
 
@@ -59,15 +61,15 @@ const Hero = () => {
                                     <button>REACT</button>
                                 </Buttoncard>
 
-                                <Dowload>
-                                    <button>Download CV <img src={shareicon} alt="" /></button>
-                                </Dowload>
+                                
+                                <CVButton href="mycv.pdf" download= "My_CV">Download CV <HiOutlineDownload /> </CVButton>
+                                
                             </Profilecard>
 
                             <Description>
                                 <Details>
                                     <h3>
-                                        Hey<br/>I'm Temitope Anjorin,<br/>Front-End Developer
+                                        Hey<br/>I'm Temitope Anjorin,<br/>Full stack Developer
                                     </h3> 
 
                                     <p>I help business grow by crafting amazing web experiences. If you’re <br/> looking for a developer that likes to get stuff done,</p>
@@ -95,7 +97,7 @@ const Hero = () => {
 export default Hero
 
 const Wrapper = styled.div`
-    background-color: #ffffff;
+    background-color: #f0e2ab4e;
     margin: 0 auto;
 `
 const Herocontain = styled.div`
@@ -171,26 +173,21 @@ const Buttoncard = styled.div`
         cursor: pointer;
     }
 `
-const Dowload = styled.div`
-   
-    button {
-        padding: 12px 30px;
-        border: 1px soli;
-        border-radius: 20px;
-        margin: 20px 0;
-        background-color: white;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 20px;
-        gap: 10px;
-        cursor: pointer;
-    }
 
-    img {
-        width: 20px;
-        height: 20px;
-    }
+const CVButton = styled.a`
+    text-decoration: none;
+    width: 150px;
+    height: 40px;
+    color: white;
+    border-radius: 20px 0;
+    background-color: orangered;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px soild black;
+    margin: 20px 0;
+    font-size: 16x;
+    /* font-weight: bold; */
 `
 
 const Iconstyle = styled.div`
@@ -202,7 +199,7 @@ const Iconstyle = styled.div`
 const Leftside = styled.div` 
     max-height: 250px;
     width: 50px;
-    background-color: black;
+    background-color: #960000;
     border: 1px solid white;
     border-radius: 50px;
     display: flex;
@@ -247,7 +244,7 @@ const Details = styled.div`
     h3{
         font-size: 35px;
         line-height: normal;
-        font-weight: 400;
+        font-weight: 500;
         color: #000000;
     }
     p {

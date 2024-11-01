@@ -42,7 +42,7 @@ export default Header;
 
 const Wrapper = styled.div`
     width: 100%;
-    background-color: #43454D;
+    background-color: #f7d79f72;
     margin: 0 auto;
 `;
 
@@ -57,7 +57,7 @@ const Innerhead = styled.div`
 `;
 
 const Logo = styled.div`
-    color: white;
+    color: #000000;
     font-size: 16px;
 `;
 
@@ -71,10 +71,10 @@ const Nav = styled.div`
     display: flex;
     gap: 40px;
     font-size: 16px;
-    color: white;
+    color: #000000;
 
     p:first-child {
-        color: #bebebe;
+        color: #720202;
     }
 `;
 
@@ -115,7 +115,7 @@ const Social = styled.div`
     display: flex;
     gap: 40px;
     align-items: center;
-    color: white;
+    color: #000000;
     font-size: 16px;
     margin-left: 30px;
 
@@ -133,6 +133,6 @@ const Social = styled.div`
 `;
 
 const Iconstyle = styled.div`
-    color:  #bebebe;
+    color:  #ff0000;
     font-size: 20px;
 `;
