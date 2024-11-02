@@ -57,6 +57,7 @@ export default Works;
 const Wrapper = styled.div`
     height: auto;
     margin: 0 auto;
+    height: auto;
 `;
 const Workscont = styled.div`
     max-width: 1920px;
@@ -75,14 +76,14 @@ const Worksdetails = styled.div`
     text-align: center;
 
     p {
-        font-size: 50px;
+        font-size: 26px;
         display: flex;
         justify-content: center;
         text-align: center;
     }
 
     img {
-        width: 200px;
+        width: 150px;
     }
 `;
 const Detailswork = styled.div``;
@@ -95,10 +96,11 @@ const Workimage = styled.div`
 const Iconstyles = styled.div`
     font-size: 50px;
     cursor: pointer;
-    color: #393939;
+    color: #b31d1d;
+    
 `;
 const SlideContainer = styled.div`
-    width: 700px;
+    width: 400px;
     display: flex;
     justify-content: center;
     overflow: hidden;
