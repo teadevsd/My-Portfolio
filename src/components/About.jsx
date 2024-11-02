@@ -36,11 +36,8 @@ const About = () =>{
 export default About
 
 const Wrapper = styled.div`
-    
-    /* border: 1px solid red; */
-    /* width: 100%; */
-    /* height: auto; */
     margin: 0 auto;
+    height: auto;
 `
 const Aboutcont = styled.div`
     max-width: 1920px;
@@ -61,7 +58,7 @@ const Aboutdetails = styled.div`
     /* border: 1px solid; */
     justify-content: space-evenly;
     align-items: center;
-    margin: 20px 0;
+    margin: 90px 0;
     /* gap: 120px; */
 
     img {

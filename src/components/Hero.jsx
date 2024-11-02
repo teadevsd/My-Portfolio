@@ -67,9 +67,10 @@ const Hero = () => {
                             </Profilecard>
 
                             <Description>
+                                
                                 <Details>
                                     <h3>
-                                        Hey<br/>I'm Temitope Anjorin,<br/>Full stack Developer
+                                        Hey<br/>I'm <span>Temitope</span> Anjorin,<br/>Full stack Developer
                                     </h3> 
 
                                     <p>I help business grow by crafting amazing web experiences. If you’re <br/> looking for a developer that likes to get stuff done,</p>
@@ -78,9 +79,9 @@ const Hero = () => {
                                 </Details>
 
                                 <Skills>
-                                    <p>4 <span>Programming Language</span></p>
-                                    <p>6 <span>Deelopment Tools</span></p>
-                                    <p>1 <span>Years of Experience</span></p>
+                                    <p>7 <span>Programming Language</span></p>
+                                    <p>6 <span>Development Tools</span></p>
+                                    <p>2 <span>Years of Experience</span></p>
                                 </Skills>
 
                             </Description>
@@ -97,18 +98,19 @@ const Hero = () => {
 export default Hero
 
 const Wrapper = styled.div`
-    background-color: #f0e2ab4e;
+    background-color: #e0e0e054;
     margin: 0 auto;
+    
 `
 const Herocontain = styled.div`
     /* min-height: calc(100vh - 70px); */
     max-width: 1920px;
-    width: 85%;
+    width: 90%;
     /* border: 1px solid red; */
     margin: 0 auto;
     display: flex;
     justify-content: space-evenly;
-    padding-bottom: 70px;
+    padding-bottom: 30px;
 `
 const Fulldetails = styled.div`
     display: flex;
@@ -117,15 +119,17 @@ const Fulldetails = styled.div`
     /* border: 1px solid yellow; */
 `
 const Profilecard = styled.div` 
-    width: 300px;
-    height: 500px;
-    border: 4px solid grey;
-    border-radius: 120px 0px;
+    min-width: 280px;
+    min-height: auto;
+    border: 2px solid grey;
+    border-radius: 30px;
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-bottom: 10px;
     justify-content: center;
+    margin-left: 50px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
     /* text-align: center; */
     img{
         width: 100px;
@@ -168,8 +172,9 @@ const Buttoncard = styled.div`
         padding: 6px 10px;
         border-radius: 12px;
         border: none;
-        background-color: #5f5f5f;
-        color: white;
+        background-color: white;
+        color: black;
+        border: 1px solid;
         cursor: pointer;
     }
 `
@@ -180,7 +185,7 @@ const CVButton = styled.a`
     height: 40px;
     color: white;
     border-radius: 20px 0;
-    background-color: orangered;
+    background-color: #832503;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -198,7 +203,7 @@ const Iconstyle = styled.div`
 `
 const Leftside = styled.div` 
     max-height: 250px;
-    width: 50px;
+    width: 60px;
     background-color: #960000;
     border: 1px solid white;
     border-radius: 50px;
@@ -208,6 +213,7 @@ const Leftside = styled.div`
     flex-direction: column;
     gap: 20px;
     margin-top: 70px;
+    
 
     img{
         width: 20px;
@@ -215,35 +221,37 @@ const Leftside = styled.div`
 `
 const Headertext = styled.div`
     text-align: center;
-    color: #4d4d4d;
+    color: brown;
     font-weight: 400;
-    font-size: 50px;
+    font-size: 40px;
 `
 const Middleside = styled.div` 
-    margin-top: 50px;
+    margin-top: 30px;
     
 `
 const Contentmiddle = styled.div` 
-    margin-top: 50px;
+    margin-top: 30px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    gap: 80px;
+    gap: 50px;
 `
 
 const Description = styled.div` 
     display: flex;
     flex-wrap: wrap;
-    gap: 80px;
+    gap: 40px;
     align-items: center;
     justify-content: space-evenly;
 `
 const Details = styled.div` 
     max-width: 800px;
-
+    span{
+        color: brown;
+    }
     h3{
-        font-size: 35px;
-        line-height: normal;
+        font-size: 30px;
+        line-height: 40px;
         font-weight: 500;
         color: #000000;
     }
@@ -257,29 +265,32 @@ const Details = styled.div`
         display: flex;
         align-items: center;
         gap: 10px;
+        cursor: pointer;
     }
 `
 const Skills = styled.div` 
-    width: 150px;
-    height: 250px;
+    width: 230px;
+    height: 350px;
     border-radius: 30px;
-    background-color: #1f1f1f;
+    /* background-color: white; */
     color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 10px;
+    padding: 20px;
     gap: 20px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
 
     p {
         display: flex;
         gap: 20px;
-        font-size: 28px;
-        color: #b8b8b8;
+        font-size: 34px;
+        color: #797979;
     }
     span {
-        font-size: 14px;
-        color: white;
+        font-size: 20px;
+        color: #000000c3;
+        font-weight: bold;
     }
 `

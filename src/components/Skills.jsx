@@ -6,6 +6,7 @@ import { FaCodeBranch } from "react-icons/fa6";
 import codebg from "../assets/png/cdee.png";
 import  html from "../assets/svg/html.svg";
 import  css from "../assets/svg/css.svg";
+import  sass from "../assets/svg/sass.svg";
 import  javascript from "../assets/svg/javascript.svg";
 import  react from "../assets/svg/react.svg";
 import  github from "../assets/svg/github.svg";
@@ -16,6 +17,8 @@ import  styledcomponents from "../assets/png/styledcomponents.png";
 import  api from "../assets/png/api.png";
 import  expressjs from "../assets/png/expressjs.png";
 import  mongo from "../assets/png/mongo.png";
+import  typescript from "../assets/png/typescript.png";
+import  sql from "../assets/svg/mysql.svg";
 
 
 
@@ -41,20 +44,32 @@ const Skills = () =>{
                           <Buttonone> <MdMonitor/> Front end Deloper <span>HTML. CSS. JS. REACT.</span></Buttonone>
                           <Buttontwo> <FaCodeBranch/> Back end Developer <span>MONGOJS. NODEJS</span></Buttontwo>
                         </Skillsdiv>
-
+                        
+                        <h2>USING NOW:</h2>
                         <Skillsicon>
-                            <img src={html} alt="" />
-                            <img src={css} alt="" />
-                            <img src={javascript} alt="" />
-                            <img src={react} alt="" />
-                            <img src={github} alt="" />
-                            <img src={gitcontrol} alt="" />
-                            <img src={vscode} alt="" />
-                            <img src={vscodeicons} alt="" />
-                            <img src={styledcomponents} alt="" />
-                            <img src={api} alt="" />
-                            <img src={expressjs} alt="" />
-                            <img src={mongo} alt="" />
+                            <p><img src={html} alt="" />HTML5</p>
+                            <p><img src={css} alt="" />CSS3</p>
+                            <p><img src={javascript} alt="" />JAVASCRIPT</p>
+                            <p><img src={react} alt="" />REACT</p>
+                            <p><img src={github} alt="" />GITHUB</p>
+                            <p><img src={gitcontrol} alt="" />VERSION <br/>CONTROL</p>
+                            <p><img src={vscode} alt="" />VS CODE</p>
+                            <p><img src={vscodeicons} alt="" />VSCODE-ICONS</p>
+                            <p><img src={styledcomponents} alt="" />STYLE <br/>COMPONENTS</p>
+                            <p><img src={api} alt="" />CONTEXT API</p>
+                            <p><img src={sass} alt="" />SAAS</p>
+                           
+
+                        </Skillsicon>
+
+                        <h2>LEARNING:</h2>
+                        <Skillsicon>
+                            
+                            <p><img src={expressjs} alt="" />NODE JS</p>
+                            <p><img src={mongo} alt="" />MONGO</p>
+                            <p><img src={typescript} alt="" />TYPESCRIPT</p>
+                            <p><img src={sql} alt="" />MY SQL</p>
+
 
                         </Skillsicon>
                     </Detailskills>
@@ -70,16 +85,13 @@ const Skills = () =>{
 export default Skills
 
 const Wrapper = styled.div`
-    /* background-color: #80808016; */
     background-image: url(${codebg});
-    /* border: 1px solid ; */
-    /* width: 100%; */
     height: auto;
     margin: 0 auto;
 `
 const Skillscont = styled.div`
     max-width: 1920px;
-    width: 85%;
+    width: 80%;
     margin: 0 auto;
     padding: 20px;
 `
@@ -94,7 +106,7 @@ const Headimg = styled.div`
 const Skillsdetails = styled.div`
     text-align: center;
    p {
-    font-size: 50px;
+    font-size: 26px;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -102,12 +114,19 @@ const Skillsdetails = styled.div`
    }
 
    img{
-    width: 200px;
+    width: 150px;
     margin: 0 auto;
    }
 `
 const Detailskills = styled.div`
-    
+    h2{
+        background-color: #ffffff;
+        width: 180px;
+        border-radius: 8px;
+        color: #000000;
+        font-size: 22px;
+        box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    }
     
 `
 const Skillsdiv =styled.div`
@@ -157,9 +176,19 @@ const Skillsicon = styled.div`
     flex-wrap: wrap;
     gap: 20px;
     justify-content: space-evenly;
-    margin: 70px 0;
+    margin: 40px 0;
     img{
         width: 70px;
     }
+
+    p{
+        font-size: 18px;
+        font-weight: bold;
+        display: flex;
+        gap: 30px;
+        margin-top: 10px;
+    }
+
+    
 `
 
