@@ -1,52 +1,68 @@
 import styled from "styled-components";
-import { Link } from "react-router-dom"
-import logo2 from "/logo2.png"
+import { Link } from "react-router-dom";
+import logo2 from "/logoo.png";
 import { GrContact } from "react-icons/gr";
 import { GiSkills } from "react-icons/gi";
 import { RiProjectorFill } from "react-icons/ri";
-
+import { IoReorderTwoOutline } from "react-icons/io5";
+import { useState } from "react";
+import Sidebar from "./SideBar"; // Import the Sidebar component
 
 const Header = () => {
+    const [isDisplayed, setIsDisplayed] = useState(false); // State to control Sidebar display
+
+    const handleToggle = () => {
+        setIsDisplayed(!isDisplayed); // Toggle Sidebar visibility
+    };
+
     return (
         <Wrapper>
             <Innerhead>
-                <Logo><img src={logo2} alt="" /></Logo>
+                <Logo><img src={logo2} alt="Logo" /></Logo>
+
                 <Headcont>
                     <Nav>
                         <Link to="/">
                             <p>Home</p>
                         </Link>
-                        
                         <Link to="/about">
                             <p>About</p>
                         </Link>
                     </Nav>
 
-                    
                     <Social>
-                        <Link to ="/connect">
-                            <p> 
+                        <Link to="/connect">
+                            <p>
                                 <Iconstyle as={GrContact} /> <span>Connect</span>
                             </p>
                         </Link>
                         <Link to="/skills">
-                            <p> 
+                            <p>
                                 <Iconstyle as={GiSkills} /> <span>Skills</span>
                             </p>
                         </Link>
                         <Link to="/projects">
-                            <p> 
+                            <p>
                                 <Iconstyle as={RiProjectorFill} /> <span>Projects</span>
                             </p>
                         </Link>
                     </Social>
                 </Headcont>
+
+                <Sidenav onClick={handleToggle}>
+                    <IoReorderTwoOutline />
+                </Sidenav>
             </Innerhead>
+
+            {isDisplayed && <Sidebar setDisplay={setIsDisplayed} />} {/* Render Sidebar based on state */}
         </Wrapper>
     );
-}
+};
 
 export default Header;
+
+// Styled Components remain the same...
+
 
 const Wrapper = styled.div`
     width: 100%;
@@ -63,6 +79,10 @@ const Innerhead = styled.div`
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+
+    @media (max-width: 480px) {
+        justify-content: space-between;
+    }
 `;
 
 const Logo = styled.div`
@@ -78,6 +98,9 @@ const Headcont = styled.div`
 
     a{
         text-decoration: none;
+    }
+    @media (max-width: 480px) {
+        display: none;
     }
 `;
 
@@ -146,9 +169,19 @@ const Social = styled.div`
             display: none; 
         }
     }
+    
 `;
 
 const Iconstyle = styled.div`
     color:  #ff0000;
     font-size: 20px;
 `;
+
+const Sidenav = styled.div`
+    font-size: 30px;
+    display: none;
+
+    @media (max-width: 480px) {
+        display: block;
+    }
+`
