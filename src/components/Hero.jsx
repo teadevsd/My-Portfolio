@@ -23,7 +23,7 @@ const Hero = () => {
     return (
         <Wrapper>
             <Herocontain>
-                <Leftside>
+                {/* <Leftside>
                     <img src={defaulticon} alt="" />
                     <img src={usericon} alt="" />
                     <img src={codeicon}  alt="" />
@@ -31,7 +31,7 @@ const Hero = () => {
                     <img src={editicon}alt="" />
                     <img src={mailicon}alt="" />
 
-                </Leftside>
+                </Leftside> */}
 
                 <Middleside>
 
@@ -128,7 +128,7 @@ const Profilecard = styled.div`
     align-items: center;
     margin-bottom: 10px;
     justify-content: center;
-    margin-left: 50px;
+    /* margin-left: 50px; */
     box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
     /* text-align: center; */
     img{
@@ -235,6 +235,10 @@ const Contentmiddle = styled.div`
     flex-wrap: wrap;
     justify-content: space-evenly;
     gap: 50px;
+
+    @media (max-width: 480px) {
+        justify-content: space-evenly;
+    }
 `
 
 const Description = styled.div` 
