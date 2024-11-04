@@ -79,9 +79,9 @@ const Hero = () => {
                                 </Details>
 
                                 <Skills>
-                                    <p>7 <span>Programming Language</span></p>
+                                    <p>4 <span>Programming Language</span></p>
                                     <p>6 <span>Development Tools</span></p>
-                                    <p>2 <span>Years of Experience</span></p>
+                                    <p>1 <span>Years of Experience</span></p>
                                 </Skills>
 
                             </Description>
