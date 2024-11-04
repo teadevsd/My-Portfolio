@@ -15,9 +15,9 @@ const Footer = () => {
                     </Topup> */}
 
                     <Footericons>
-                        <FaGithub/>
-                        <MdEmail/>
-                        <FaLinkedin/>
+                        <a href="https://github.com/teadevsd" target="_blank"><FaGithub/></a>
+                        <a href="mailto:anjorinemmanuel@gmail.com"><MdEmail/></a>
+                        <a href="www.linkedin.com/in/temitope-anjorin"><FaLinkedin/></a>
                     </Footericons>
 
                     <p>@2024 Teadev. All Rights Reserved.</p>
@@ -56,4 +56,14 @@ const Footericons = styled.div`
     gap: 30px;
     margin: 20px 0;
     cursor: pointer;
+
+    
+    a{
+        color: black;
+
+        &:hover{
+        color: grey;
+    }
+
+    }
 `

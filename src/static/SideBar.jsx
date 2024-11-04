@@ -2,16 +2,18 @@ import styled from "styled-components";
 import { IoMdArrowDropright } from "react-icons/io";
 import { Link } from "react-router-dom";
 
+
 const Sidebar = ({ setDisplay }) => {
     const handleLinkClick = () => {
-        setDisplay(false); // Hide Sidebar when a link is clicked
+        setDisplay(false); 
+        
     };
 
     return (
         <Container>
             <Naviga>
                 <Styledlink to="/" onClick={handleLinkClick}>
-                    <nav>Home <IoMdArrowDropright /> </nav>
+                    <nav> Home <IoMdArrowDropright /> </nav>
                 </Styledlink>
 
                 <Styledlink to="/about" onClick={handleLinkClick}>
@@ -36,7 +38,6 @@ const Sidebar = ({ setDisplay }) => {
 
 export default Sidebar;
 
-// Styled Components remain the same...
 
 
 const Container = styled.div`

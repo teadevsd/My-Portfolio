@@ -6,13 +6,13 @@ import { GiSkills } from "react-icons/gi";
 import { RiProjectorFill } from "react-icons/ri";
 import { IoReorderTwoOutline } from "react-icons/io5";
 import { useState } from "react";
-import Sidebar from "./SideBar"; // Import the Sidebar component
+import Sidebar from "./SideBar"; 
 
 const Header = () => {
-    const [isDisplayed, setIsDisplayed] = useState(false); // State to control Sidebar display
+    const [isDisplayed, setIsDisplayed] = useState(false);
 
     const handleToggle = () => {
-        setIsDisplayed(!isDisplayed); // Toggle Sidebar visibility
+        setIsDisplayed(!isDisplayed); 
     };
 
     return (
@@ -54,14 +54,12 @@ const Header = () => {
                 </Sidenav>
             </Innerhead>
 
-            {isDisplayed && <Sidebar setDisplay={setIsDisplayed} />} {/* Render Sidebar based on state */}
+            {isDisplayed && <Sidebar setDisplay={setIsDisplayed} />}
         </Wrapper>
     );
 };
 
 export default Header;
-
-// Styled Components remain the same...
 
 
 const Wrapper = styled.div`
@@ -116,38 +114,6 @@ const Nav = styled.div`
     }
 `;
 
-const Search = styled.div`
-    display: flex;
-    background-color: white;
-    width: 180px;
-    border-radius: 20px;
-    align-items: center;
-    margin-left: 30px;
-    font-size: 14px;
-
-    img{
-        width: 30px;
-    }
-    input {
-        width: 140px;
-        height: 20px;
-        outline: none;
-        border: none;
-        border-radius: 20px;
-    }
-
-    @media (max-width: 1280px) {
-        input {
-            display: none; 
-        }
-
-        img {
-            display: block;
-            width: 30px; 
-            height: auto; 
-        }
-    }
-`;
 
 const Social = styled.div`
     display: flex;
@@ -173,8 +139,10 @@ const Social = styled.div`
 `;
 
 const Iconstyle = styled.div`
-    color:  #ff0000;
+    color:  #bd0202;
     font-size: 20px;
+
+   
 `;
 
 const Sidenav = styled.div`
