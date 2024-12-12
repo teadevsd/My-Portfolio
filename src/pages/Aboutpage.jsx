@@ -1,13 +1,13 @@
-import About from "../components/About"
+// import About from "../components/About"
 
 
-const Aboutpage = () =>{
-    return (
-        <div>
-            <About/>
-        </div>
-    )
-}
+// const Aboutpage = () =>{
+//     return (
+//         <div>
+//             <About/>
+//         </div>
+//     )
+// }
 
-export default Aboutpage
+// export default Aboutpage
 

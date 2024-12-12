@@ -1,300 +1,249 @@
-import styled from "styled-components";
-import profile from "../assets/jpg/profile.jpg";
-import defaulticon from "../assets/png/Default.png";
-import usericon from "../assets/png/user.png";
-import codeicon from "../assets/png/code.png";
-import monitoricon from "../assets/png/monitor.png";
-import editicon from "../assets/png/edit.png";
-import mailicon from "../assets/png/mail.png";
-import { MdOutlineMailOutline } from "react-icons/md";
-import { MdLocationPin } from "react-icons/md";
-import { MdWork } from "react-icons/md";
-import { SlPaperClip } from "react-icons/sl";
-import shareicon from "../assets/png/share.png";
-import { FaCodeBranch } from "react-icons/fa6";
-import { HiOutlineDownload } from "react-icons/hi";
-
-
-
-
-
+import React from 'react';
+import styled, { keyframes } from 'styled-components';
+import { FaGithub } from "react-icons/fa6";
+import { FaSquareXTwitter } from "react-icons/fa6";
+import { FaLinkedin } from "react-icons/fa";
+import teadev from "../assets/jpg/teadee.jpg";
 
 const Hero = () => {
-    return (
-        <Wrapper>
-            <Herocontain>
-                {/* <Leftside>
-                    <img src={defaulticon} alt="" />
-                    <img src={usericon} alt="" />
-                    <img src={codeicon}  alt="" />
-                    <img src={monitoricon} alt="" />
-                    <img src={editicon}alt="" />
-                    <img src={mailicon}alt="" />
+  return (
+    <Wrapper>
+      <span className='imghover'></span>
+      <Innerwrapper>
+        <h1>Hi, I'm Temitope Anjorin</h1>
+        <h3>Full-stack Developer</h3>
+        <p>
+        I help businesses grow by crafting exceptional web experiences. If you’re looking for a developer who’s all about turning ideas into reality and getting things done, let’s connect!
+        </p>
 
-                </Leftside> */}
+        <Button>
+          <a href="mailto:anjorinemmanuelt@gmail.com">Hire Me</a>
+          <a href="tel:+2348162497407">Let's Talk</a>
+        </Button>
 
-                <Middleside>
+        <Icons>
+          <a href="https://github.com/teadevsd"><FaGithub /></a>
+          <a href="https://x.com/teanjorin"><FaSquareXTwitter /></a>
+          <a href="https://linkedin.com/in/temitope-anjorin"><FaLinkedin /></a>
+        </Icons>
+      </Innerwrapper>
+    </Wrapper>
+  );
+};
 
-                    <Headertext>
-                        <p>Developer</p>
-                    </Headertext>
+export default Hero;
 
-                    <Fulldetails>
-                        <Contentmiddle>
+const showRight = keyframes`
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+`;
 
-                            <Profilecard>
-                                <img src={profile} alt="" />
-                                <p>Temitope</p>
-                                <p>Front-End Developer</p>
-
-                                <Detailsprofile>
-                                    <caption> <Iconstyle as={MdOutlineMailOutline} /> <span>anjorinemmanuelt@gmail.com</span></caption>
-                                    <caption> <Iconstyle as={MdLocationPin} /> <span>Lagos</span> </caption>
-                                    <caption> <Iconstyle as={MdWork} /> <span>Full-time / Freelancer</span>  </caption>
-                                    <caption> <Iconstyle as={SlPaperClip} /> <span>github.com/teadevsd</span>  </caption>
-                                </Detailsprofile>
-
-                                <Buttoncard>
-                                    <button>HTML</button>
-                                    <button>CSS</button>
-                                    <button>JS</button>
-                                    <button>REACT</button>
-                                </Buttoncard>
-
-                                
-                                <CVButton href="mycv.pdf" download= "My_CV">Download CV <HiOutlineDownload /> </CVButton>
-                                
-                            </Profilecard>
-
-                            <Description>
-                                
-                                <Details>
-                                    <h3>
-                                        Hey<br/>I'm <span>Temitope</span> Anjorin,<br/>Full stack Developer
-                                    </h3> 
-
-                                    <p>I help business grow by crafting amazing web experiences. If you’re <br/> looking for a developer that likes to get stuff done,</p>
-
-                                    <h5>Let’s Talk <MdOutlineMailOutline /> </h5>                          
-                                </Details>
-
-                                <Skills>
-                                    <p>4 <span>Programming Language</span></p>
-                                    <p>6 <span>Development Tools</span></p>
-                                    <p>1 <span>Years of Experience</span></p>
-                                </Skills>
-
-                            </Description>
-                        </Contentmiddle>
-
-                    </Fulldetails>
-
-                </Middleside>
-            </Herocontain>
-        </Wrapper>
-    )
-}
-
-export default Hero
+const moveRight = keyframes`
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+`;
 
 const Wrapper = styled.div`
-    background-color: #e0e0e054;
-    margin: 0 auto;
-    
-`
-const Herocontain = styled.div`
-    /* min-height: calc(100vh - 70px); */
-    max-width: 1920px;
-    width: 90%;
-    /* border: 1px solid red; */
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-evenly;
-    padding-bottom: 30px;
-`
-const Fulldetails = styled.div`
-    display: flex;
-    justify-content: space-between;
-    
-    /* border: 1px solid yellow; */
-`
-const Profilecard = styled.div` 
-    min-width: 280px;
-    min-height: auto;
-    border: 2px solid grey;
-    border-radius: 30px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 10px;
-    justify-content: center;
-    /* margin-left: 50px; */
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
-    /* text-align: center; */
-    img{
-        width: 100px;
-        height: 100px;
-        border-radius: 50%;
-    }
+  height: 100vh;
+  background-image: url(${teadev});
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  padding: 0 10%;
+  position: relative;
+  opacity: 1;
 
-    p:nth-child(2){
-        font-size: 32px;
-        color: #000000;
-        font-weight: 600;
-        /* font-family: 'IBM Plex Mono', Courier New, Courier, monospace; */
-    }
+  .imghover {
+    position: absolute;
+    top: 0;
+    right: 0px;
+    width: 550px;
+    height: 100%;
+    background: transparent;
+    transition: 3s;
+    z-index: 0;
 
-    p:nth-child(3){
-        font-size: 20px;
-        color: #000000;
-        font-weight: 200;
-        /* font-family: 'IBM Plex Mono', Courier New, Courier, monospace; */
+    &:hover {
+      background: #081b29;
+      opacity: 0.8;
     }
-`
-const Detailsprofile = styled.div`
-        margin: 10px 0;
-        
-        caption{
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        padding: 5px;
-        color: #000000;
-        /* font-family: 'IBM Plex Mono', Courier New, Courier, monospace; */
-        font-size: 16px;
+  }
+
+  @media (max-width: 768px) {
+    padding: 0 5%;
+    .imghover {
+      width: 400px;
     }
-`
+    background-image: url(${teadev});
+    background-position: center;
+    background-size: cover;
+    background-opacity: 0.9; /* Apply opacity */
+  }
 
-const Buttoncard = styled.div`
-    display: flex;
-    gap: 10px;
-    button {
-        padding: 6px 10px;
-        border-radius: 12px;
-        border: none;
-        background-color: white;
-        color: black;
-        border: 1px solid;
-        cursor: pointer;
+  @media (max-width: 480px) {
+    padding: 0 3%;
+    .imghover {
+      width: 250px;
     }
-`
+    background-image: url(${teadev});
+    background-position: center;
+    background-size: cover;
+    background-opacity: 0.9; /* Apply opacity */
+  }
+`;
 
-const CVButton = styled.a`
-    text-decoration: none;
-    width: 150px;
-    height: 40px;
-    color: white;
-    border-radius: 20px 0;
-    background-color: #832503;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 1px soild black;
-    margin: 20px 0;
-    font-size: 16x;
-    /* font-weight: bold; */
-`
+const Innerwrapper = styled.div`
+  max-width: 600px;
+  color: #ededed;
+  position: relative;
+  animation: ${moveRight} 1.5s ease-out;
+  z-index: 10;
 
-const Iconstyle = styled.div`
-    display: flex;
-    flex-direction: column;
-    font-size: 16px;
-    color: #000000;
-`
-const Leftside = styled.div` 
-    max-height: 250px;
-    width: 60px;
-    background-color: #960000;
-    border: 1px solid white;
-    border-radius: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap: 20px;
-    margin-top: 70px;
-    
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    animation: ${showRight} 1s ease forwards;
+    animation-delay: 1s;
+    z-index: -1;
+  }
 
-    img{
-        width: 20px;
-    }
-`
-const Headertext = styled.div`
-    text-align: center;
-    color: brown;
-    font-weight: 400;
+  h1 {
     font-size: 40px;
-`
-const Middleside = styled.div` 
-    margin-top: 30px;
-    
-`
-const Contentmiddle = styled.div` 
-    margin-top: 30px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    gap: 50px;
+    font-weight: 600;
+    position: relative;
+    line-height: 1.1;
+  }
 
-    @media (max-width: 480px) {
-        justify-content: space-evenly;
-    }
-`
+  h3 {
+    font-size: 30px;
+    font-weight: 500;
+    color: #00abf0;
+  }
 
-const Description = styled.div` 
-    display: flex;
-    flex-wrap: wrap;
-    gap: 40px;
-    align-items: center;
-    justify-content: space-evenly;
-`
-const Details = styled.div` 
-    max-width: 800px;
-    span{
-        color: brown;
-    }
-    h3{
-        font-size: 30px;
-        line-height: 40px;
-        font-weight: 500;
-        color: #000000;
-    }
-    p {
-        color: #000000;
-        margin: 30px 0;
-    }
-    h5 {
-        font-size: 32px;
-        color: #000000;
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        cursor: pointer;
-    }
-`
-const Skills = styled.div` 
-    width: 230px;
-    height: 350px;
-    border-radius: 30px;
-    /* background-color: white; */
-    color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  p {
+    font-size: 14px;
+    margin: 20px 0;
+  }
+`;
+
+const Button = styled.div`
+  width: 345px;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+
+  a {
+    position: relative;
+    display: inline-flex;
     justify-content: center;
-    padding: 20px;
-    gap: 20px;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+    align-items: center;
+    width: 150px;
+    height: 100%;
+    background: #00abf0;
+    border: 1px solid #00abf0;
+    border-radius: 8px;
+    font-size: 19px;
+    text-decoration: none;
+    color: #081b29;
+    font-weight: 600;
+    letter-spacing: 1px;
+    z-index: 1;
+    overflow: hidden;
+    transition: 0.5s;
 
-    p {
-        display: flex;
-        gap: 20px;
-        font-size: 34px;
-        color: #797979;
+    &:hover {
+      color: #00abf0;
     }
-    span {
-        font-size: 20px;
-        color: #000000c3;
-        font-weight: bold;
+
+    &:nth-child(2) {
+      background: transparent;
+      color: #00abf0;
     }
-`
+
+    &:nth-child(2):hover {
+      color: #081b29;
+    }
+
+    &:nth-child(2)::before {
+      background: #00abf0;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 0;
+      height: 100%;
+      background: #081b29;
+      z-index: -1;
+      transition: 0.5s;
+    }
+
+    &:hover::before {
+      width: 100%;
+    }
+  }
+`;
+
+const Icons = styled.div`
+  font-size: 30px;
+  position: absolute;
+  bottom: -100px;
+  width: 200px;
+  display: flex;
+  justify-content: space-between;
+
+  a {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid #00abf0;
+    color: #00abf0;
+    text-decoration: none;
+    border-radius: 50%;
+    z-index: 1;
+    overflow: hidden;
+    transition: 0.5s;
+
+    &:hover {
+      color: #081b29;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 0;
+      height: 100%;
+      background: #00abf0;
+      z-index: -1;
+      transition: 0.5s;
+    }
+
+    &:hover::before {
+      width: 100%;
+    }
+  }
+`;

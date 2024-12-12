@@ -6,22 +6,21 @@ const About = () =>{
     return (
         <Wrapper>
             <Aboutcont>
-                <Headimg>
+                {/* <Headimg>
                     <img src={scroll} alt="" />
-                </Headimg>
+                </Headimg> */}
 
                 <Aboutdetails>
                     <Detailsabout>
                         <button>About Me</button>
 
                         <Hellodiv>
-                            <p>Hello!</p>
+                            <p>Hi, I'm Temitope Anjorin!</p>
+                            <strong>MERN Fullstack Developer</strong>
                             <article>
-                            
-                                My name is Temitope Anjorin and I specialize in software developement that utilizes HTML, CSS, JS, and REACT etc. <br/><br/>
-                                I am a highly motivated individual and eternal optimist dedicated to writing clear, concise, robust code that works. Striving to never stop learning and improving.
-                                Beyond coding, you’ll often find me immersed in design, exploring music, or working on creative projects like photography. <br/><br/>
-                                I like to have my perspective and belief systems challenged so that I see the world through new eyes.
+                          
+                               
+                            I specialize in building dynamic, responsive, and scalable web applications using the MERN stack (MongoDB, Express.js, React.js, and Node.js) along with foundational technologies like HTML, CSS, and JavaScript. <br/><br/>I am a highly motivated problem solver and eternal optimist dedicated to delivering clear, efficient, and robust code. My passion for continuous learning drives me to stay at the forefront of emerging technologies and best practices in software development. <br/><br/>When I'm not coding, you’ll likely find me exploring creative pursuits like design, music, or photography, all of which inspire my work as a developer. I also enjoy engaging in thought-provoking conversations that challenge my perspectives and broaden my worldview.<br/><br/>Let’s connect and create something amazing together!
                             </article>
                         </Hellodiv>
                     </Detailsabout>
@@ -36,62 +35,72 @@ const About = () =>{
 export default About
 
 const Wrapper = styled.div`
-    margin: 0 auto;
-    height: auto;
+    margin: 80px auto;
+    height: 100vh;
+    
 `
 const Aboutcont = styled.div`
     max-width: 1920px;
     width: 85%;
     margin: 0 auto;
+    
+    /* border: 1px solid white; */
 `
-const Headimg = styled.div`
-    display: flex;
-    justify-content: center;
-    padding: 20px 0;
-    img {
-        width: 20px;
-    }
-`
+// const Headimg = styled.div`
+//     display: flex;
+//     justify-content: center;
+//     padding: 20px 0;
+//     img {
+//         width: 20px;
+//     }
+// `
 const Aboutdetails = styled.div`
     display: flex;
     flex-wrap: wrap ;
     /* border: 1px solid; */
     justify-content: space-evenly;
     align-items: center;
-    margin: 90px 0;
-    /* gap: 120px; */
+    padding-top: 60px;
 
     img {
-        width: 300px;
+        width: 280px;
     }
 `
 const Detailsabout = styled.div`
     button{
-        padding: 16px 60px;
+        padding: 12px 30px;
         font-size: 18px;
-        border-radius: 30px 0;
-        background-color: orange;
+        border-radius: 4px;
+        background-color: #ededed;
         color: black;
-        border: 5px solid lightgray;
+        border: none;
     }
     
 `
 const Hellodiv =styled.div`
+    display: flex;
+    flex-direction: column;
     max-width: 600px;
-    border-radius: 30px;
+    border-radius: 4px;
     height: auto;
-    background-color: brown;
+    background-color: #083352;
     padding: 20px;
     margin: 30px 0;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 
     article{
-        font-size: 14px;
+        font-size: 12px;
         color: white;
-        
+        text-align: justify;
     }
     p{
-        font-size: 40px;
-        color: lemonchiffon;
+        font-size: 32px;
+        font-weight: 400;
+        color: #00abf0;
+    }
+
+    strong {
+        color: white;
+        font-size: 18px;
     }
 `

@@ -1,155 +1,118 @@
-import styled from "styled-components";
-import { Link } from "react-router-dom";
-import logo2 from "/logoo.png";
-import { GrContact } from "react-icons/gr";
-import { GiSkills } from "react-icons/gi";
-import { RiProjectorFill } from "react-icons/ri";
+import React, { useState } from 'react'
+import styled, { keyframes } from 'styled-components'
 import { IoReorderTwoOutline } from "react-icons/io5";
-import { useState } from "react";
-import Sidebar from "./SideBar"; 
+import Sidebar from './SideBar';
 
 const Header = () => {
-    const [isDisplayed, setIsDisplayed] = useState(false);
+    const [toggle, setToggle] = useState(false);
 
-    const handleToggle = () => {
-        setIsDisplayed(!isDisplayed); 
-    };
+  const handleToggle = () => {
+    setToggle(!toggle);
+  };
+  
+  return (
+  <>
+      <Wrapper>
+        <Innerwrapper>
+            <a href="" className='logo'>teadev.</a>
+            <Navlist>
+                <a href="/">Home</a>
+                <a href="/about">About</a>
+                <a href="/skills">Service</a>
+                <a href="/projects">Portfolio</a>
+                <a href="/contact">Contact</a>
+            </Navlist>
 
-    return (
-        <Wrapper>
-            <Innerhead>
-                <Logo><img src={logo2} alt="Logo" /></Logo>
+            <Sidenav onClick={handleToggle}>
+            <IoReorderTwoOutline />
+          </Sidenav>
 
-                <Headcont>
-                    <Nav>
-                        <Link to="/">
-                            <p>Home</p>
-                        </Link>
-                        <Link to="/about">
-                            <p>About</p>
-                        </Link>
-                    </Nav>
+        </Innerwrapper>
+    </Wrapper>
+     {toggle && <Sidebar setDisplay={setToggle} />}
+  </>
+  )
+}
 
-                    <Social>
-                        <Link to="/connect">
-                            <p>
-                                <Iconstyle as={GrContact} /> <span>Connect</span>
-                            </p>
-                        </Link>
-                        <Link to="/skills">
-                            <p>
-                                <Iconstyle as={GiSkills} /> <span>Skills</span>
-                            </p>
-                        </Link>
-                        <Link to="/projects">
-                            <p>
-                                <Iconstyle as={RiProjectorFill} /> <span>Projects</span>
-                            </p>
-                        </Link>
-                    </Social>
-                </Headcont>
+export default Header
 
-                <Sidenav onClick={handleToggle}>
-                    <IoReorderTwoOutline />
-                </Sidenav>
-            </Innerhead>
 
-            {isDisplayed && <Sidebar setDisplay={setIsDisplayed} />}
-        </Wrapper>
-    );
-};
-
-export default Header;
-
+const showRight = keyframes`
+  100% {
+    width: 0;
+  }
+`
 
 const Wrapper = styled.div`
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
-    background-color: #ffffff;
-    margin: 0 auto;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
-`;
-
-const Innerhead = styled.div`
-    margin: 0 auto;
-    max-width: 1920px;
-    width: 85%;
-    height: 70px;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-
-    @media (max-width: 480px) {
-        justify-content: space-between;
-    }
-`;
-
-const Logo = styled.div`
-    img{
-        width: 120px;
-    }
-`;
-
-const Headcont = styled.div`
-    display: flex;
-    gap: 40px;
-    align-items: center;
-
-    a{
-        text-decoration: none;
-    }
-    @media (max-width: 480px) {
-        display: none;
-    }
-`;
-
-const Nav = styled.div`
-    display: flex;
-    gap: 40px;
-    font-size: 16px;
-    color: #000000;
-    cursor: pointer;
-
-    p:first-child {
-        color: #720202;
-    }
-`;
-
-
-const Social = styled.div`
-    display: flex;
-    gap: 40px;
-    align-items: center;
-    color: #000000;
-    font-size: 16px;
-    margin-left: 30px;
-
-    p {
-        display: flex;
-        align-items: center;
-        gap: 8px; 
-        cursor: pointer;
-    }
-
-    @media (max-width: 1280px) {
-        span {
-            display: none; 
-        }
-    }
-    
-`;
-
-const Iconstyle = styled.div`
-    color:  #bd0202;
-    font-size: 20px;
-
-   
-`;
-
-const Sidenav = styled.div`
-    font-size: 30px;
-    display: none;
-
-    @media (max-width: 480px) {
-        display: block;
-    }
+    padding: 20px 10%;
+    background-color: transparent;
+    z-index: 100;
 `
+
+const Innerwrapper = styled.div`
+    max-width: 1280px; 
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    margin: 0 auto;
+
+    .logo {
+        position: relative;
+        text-decoration: none;
+        font-size: 25px;
+        color: #ededed;
+        font-weight: 600;
+
+        &::before {
+            content: '';
+            top: 0;
+            right: 0;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: #081b29;
+            animation: ${showRight} 1s ease forwards; 
+            animation-delay: .4s;
+        }
+
+     
+    }
+
+    
+`
+
+const Navlist = styled.div`
+    a {
+        text-decoration: none;
+        color: #ededed;
+        font-weight: 500;
+        margin-left: 20px;
+        z-index: 100;
+        font-size: 13px;
+    }
+
+    &:hover {
+        color: #00abf0;
+    }
+
+    @media (max-width: 768px) {
+    display: none;
+  }
+
+`
+const Sidenav = styled.div`
+  font-size: 40px;
+  display: none;
+  color: #fff;
+  cursor: pointer;
+
+  @media (max-width: 768px) {
+    display: block;
+  }
+`;

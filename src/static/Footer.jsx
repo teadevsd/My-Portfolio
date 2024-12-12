@@ -32,7 +32,7 @@ export default Footer
 const Wrapper = styled.div` 
     height: 150px;
     width: 100%;
-    margin: 0 auto;
+    margin: 120px auto;
     background-color: #e8e7e7;
 `
 const Footerwap = styled.div`

@@ -52,9 +52,9 @@ const Works = () => {
     return (
         <Wrapper>
             <Workscont>
-                <Headimg>
+                {/* <Headimg>
                     <img src={scroll} alt="Scroll icon" />
-                </Headimg>
+                </Headimg> */}
 
                 <Worksdetails>
                     <Detailswork>
@@ -112,12 +112,14 @@ const Headimg = styled.div`
 `;
 const Worksdetails = styled.div`
     text-align: center;
+    margin-top: 120px;
 
     p {
         font-size: 26px;
         display: flex;
         justify-content: center;
         text-align: center;
+        color: #ededed;
     }
 
     img {
@@ -136,7 +138,7 @@ const Workimage = styled.div`
 const Iconstyles = styled.div`
     font-size: 50px;
     cursor: pointer;
-    color: #383737;
+    color: #00abf0;
 `;
 const SlideContainer = styled.div`
     width: 400px;
@@ -169,14 +171,14 @@ const Caption = styled.p`
 const ReadMoreButton = styled.button`
     margin-top: 10px; 
     padding: 8px 12px;
-    background-color: #b30303;
+    background-color: #00abf0;
     border: none;
-    border-radius: 8px;
+    border-radius: 4px;
     color: #ffffff;
     font-weight: bold;
     cursor: pointer;
     text-decoration: underline;
-    font-size: 16px;
+    font-size: 12px;
 
     &:hover {
         color: #000000;

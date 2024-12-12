@@ -1,12 +1,12 @@
-import Skills from "../components/Skills"
+// import Skills from "../components/Skills"
 
-const Skillspage = () =>{
-    return (
-        <div>
-            <Skills/>
-        </div>
-    )
-}
+// const Skillspage = () =>{
+//     return (
+//         <div>
+//             <Skills/>
+//         </div>
+//     )
+// }
 
-export default Skillspage
+// export default Skillspage
 
