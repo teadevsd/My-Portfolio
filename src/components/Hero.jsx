@@ -4,6 +4,7 @@ import { FaGithub } from "react-icons/fa6";
 import { FaSquareXTwitter } from "react-icons/fa6";
 import { FaLinkedin } from "react-icons/fa";
 import teadev from "../assets/jpg/teadee.jpg";
+import { Link } from 'react-router-dom';
 
 
 const Hero = () => {
@@ -23,9 +24,9 @@ const Hero = () => {
         </Button>
 
         <Icons>
-          <a href="https://github.com/teadevsd"><FaGithub /></a>
-          <a href="https://x.com/teanjorin"><FaSquareXTwitter /></a>
-          <a href="https://linkedin.com/in/temitope-anjorin"><FaLinkedin /></a>
+          <Link to= "https://github.com/teadevsd"><FaGithub /></Link>
+          <Link to= "https://x.com/teanjorin"><FaSquareXTwitter /></Link>
+          <Link to= "https://linkedin.com/in/temitope-anjorin"><FaLinkedin /></Link>
         </Icons>
       </Innerwrapper>
     </Wrapper>
