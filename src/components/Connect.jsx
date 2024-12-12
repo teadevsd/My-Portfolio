@@ -84,7 +84,7 @@ const Aboutcont = styled.div`
   gap: 10px;
   flex-wrap: wrap;
   background-color: #0000002a;
-  padding: 50px 0;
+  padding: 20px 0;
   margin-top: 80px;
 
   h2 {

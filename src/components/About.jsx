@@ -69,7 +69,7 @@ const Aboutdetails = styled.div`
 const Detailsabout = styled.div`
     button{
         padding: 12px 30px;
-        font-size: 18px;
+        font-size: 14px;
         border-radius: 4px;
         background-color: #ededed;
         color: black;

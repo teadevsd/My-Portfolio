@@ -1,40 +1,41 @@
 import styled from "styled-components";
-import { IoMdArrowDropright } from "react-icons/io";
 import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
+
 
 
 const Sidebar = ({ setDisplay }) => {
     const handleLinkClick = () => {
         setDisplay(false); 
-        
     };
 
     return (
         <Container>
             <Naviga>
-                <Styledlink to="/" onClick={handleLinkClick}>
-                    <nav> Home  </nav>
+                <Styledlink to="/" activeClassName="active" onClick={handleLinkClick}>
+                    <nav>Home</nav>
                 </Styledlink>
 
-                <Styledlink to="/about" onClick={handleLinkClick}>
-                    <nav>About </nav>
+                <Styledlink to="/about" activeClassName="active" onClick={handleLinkClick}>
+                    <nav>About</nav>
                 </Styledlink>
 
-                <Styledlink to="/connect" onClick={handleLinkClick}>
-                    <nav>Connect </nav>
+                <Styledlink to="/contact" activeClassName="active" onClick={handleLinkClick}>
+                    <nav>Contact</nav>
                 </Styledlink>
 
-                <Styledlink to="/skills" onClick={handleLinkClick}>
-                    <nav>Skills </nav>
+                <Styledlink to="/skills" activeClassName="active" onClick={handleLinkClick}>
+                    <nav>Skills</nav>
                 </Styledlink>
 
-                <Styledlink to="/projects" onClick={handleLinkClick}>
-                    <nav>Project </nav>
+                <Styledlink to="/projects" activeClassName="active" onClick={handleLinkClick}>
+                    <nav>Project</nav>
                 </Styledlink>
             </Naviga>
         </Container>
     );
 };
+
 
 export default Sidebar;
 
@@ -52,18 +53,26 @@ const Naviga = styled.div`
 `
 const Styledlink = styled(Link)`
     text-decoration: none;
-    nav{
+
+    nav {
         display: flex;
         align-items: center;
         justify-content: space-between;
         cursor: pointer;
         border-bottom: 1px solid lightgrey;
-        /* margin-bottom: 10px; */
         font-size: 16px;
         font-weight: 500;
         padding: 20px 0;
         color: #ededed;
+        transition: color 0.3s ease;
+
+        &:hover {
+            color: #00abf0;
+        }
     }
-    
-    
-`
+
+    &.active nav {
+        color: #00abf0;
+        font-weight: 600; 
+    }
+`;
