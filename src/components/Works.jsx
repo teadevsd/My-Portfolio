@@ -58,8 +58,7 @@ const Works = () => {
 
                 <Worksdetails>
                     <Detailswork>
-                        <p>Projects</p>
-                        <img src={line} alt="Line icon" />
+                        
                       
                         <Workimage>
                             <Iconstyles onClick={handlePrev} as={IoIosArrowDropleftCircle} />
@@ -160,11 +159,11 @@ const CaptionContainer = styled.div`
 `;
 
 const Caption = styled.p`
-    font-size: 14px !important;
+    font-size: 12px !important;
     color: #333;
     padding: 0 20px;
     line-height: 1.5;
-    text-align: left !important;
+    text-align: justify !important;
     font-family: inherit !important;
 `;
 

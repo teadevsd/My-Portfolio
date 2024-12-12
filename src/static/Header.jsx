@@ -2,7 +2,8 @@ import React, { useState } from 'react'
 import styled, { keyframes } from 'styled-components'
 import { IoReorderTwoOutline } from "react-icons/io5";
 import Sidebar from './SideBar';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
+
 
 const Header = () => {
     const [toggle, setToggle] = useState(false);
@@ -16,13 +17,15 @@ const Header = () => {
       <Wrapper>
         <Innerwrapper>
             <a href="" className='logo'>teadev.</a>
+
             <Navlist>
-                <Link to= "/"><p>Home</p></Link>
-                <Link to= "/about"><p>About</p></Link>
-                <Link to= "/skills"><p>Skills</p></Link>
-                <Link to= "/projects"><p>Projects</p></Link>
-                <Link to= "/contact"><p>Contact</p></Link>
+                <NavLink to="/" activeClassName="active"><p>Home</p></NavLink>
+                <NavLink to="/about" activeClassName="active"><p>About</p></NavLink>
+                <NavLink to="/skills" activeClassName="active"><p>Skills</p></NavLink>
+                <NavLink to="/projects" activeClassName="active"><p>Projects</p></NavLink>
+                <NavLink to="/contact" activeClassName="active"><p>Contact</p></NavLink>
             </Navlist>
+
 
             <Sidenav onClick={handleToggle}>
             <IoReorderTwoOutline />
@@ -102,17 +105,23 @@ const Navlist = styled.div`
         margin-left: 40px;
         z-index: 100;
         font-size: 13px;
-    }
+        transition: color 0.3s ease;
 
-    &:hover {
-        color: #00abf0;
+        &:hover {
+            color: #00abf0;
+        }
+
+        &.active {
+            color: #00abf0;
+            font-weight: 600; 
+        }
     }
 
     @media (max-width: 768px) {
-    display: none;
-  }
+        display: none;
+    }
+`;
 
-`
 const Sidenav = styled.div`
   font-size: 40px;
   display: none;
