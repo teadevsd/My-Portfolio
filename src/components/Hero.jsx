@@ -90,7 +90,7 @@ const Wrapper = styled.div`
     background-image: url(${teadev});
     background-position: center;
     background-size: cover;
-    background-opacity: 0.9; /* Apply opacity */
+    opacity: 0.9; 
   }
 
   @media (max-width: 480px) {
@@ -106,7 +106,7 @@ const Wrapper = styled.div`
 `;
 
 const Innerwrapper = styled.div`
-  max-width: 600px;
+  max-width: 500px;
   color: #ededed;
   position: relative;
   animation: ${moveRight} 1.5s ease-out;
