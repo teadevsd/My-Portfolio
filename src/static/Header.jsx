@@ -53,8 +53,8 @@ const Wrapper = styled.div`
     left: 0;
     width: 100%;
     padding: 20px 5%;
-    background-color: transparent;
-    z-index: 100;
+    background-color: #081b29;
+    z-index: 1000;
 
     
 `
