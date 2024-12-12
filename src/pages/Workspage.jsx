@@ -1,14 +1,14 @@
-import Works from "../components/Works";
+// import Works from "../components/Works";
 
 
-const Workspage = () => {
+// const Workspage = () => {
   
-    return (
-       <div>
-            <Works/>
-       </div>
-    );
-};
+//     return (
+//        <div>
+//             <Works/>
+//        </div>
+//     );
+// };
 
-export default Workspage;
+// export default Workspage;
 

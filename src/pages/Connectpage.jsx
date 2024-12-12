@@ -1,12 +1,12 @@
-import Connect from "../components/Connect";
+// import Connect from "../components/Connect";
 
-const Connectpage = () =>{
-    return (
-        <div>
-            <Connect/>
-        </div>
-    )
-}
+// const Connectpage = () =>{
+//     return (
+//         <div>
+//             <Connect/>
+//         </div>
+//     )
+// }
 
-export default Connectpage
+// export default Connectpage
 

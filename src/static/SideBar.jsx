@@ -13,23 +13,23 @@ const Sidebar = ({ setDisplay }) => {
         <Container>
             <Naviga>
                 <Styledlink to="/" onClick={handleLinkClick}>
-                    <nav> Home <IoMdArrowDropright /> </nav>
+                    <nav> Home  </nav>
                 </Styledlink>
 
                 <Styledlink to="/about" onClick={handleLinkClick}>
-                    <nav>About <IoMdArrowDropright /></nav>
+                    <nav>About </nav>
                 </Styledlink>
 
                 <Styledlink to="/connect" onClick={handleLinkClick}>
-                    <nav>Connect <IoMdArrowDropright /></nav>
+                    <nav>Connect </nav>
                 </Styledlink>
 
                 <Styledlink to="/skills" onClick={handleLinkClick}>
-                    <nav>Skills <IoMdArrowDropright /></nav>
+                    <nav>Skills </nav>
                 </Styledlink>
 
                 <Styledlink to="/projects" onClick={handleLinkClick}>
-                    <nav>Project <IoMdArrowDropright /></nav>
+                    <nav>Project </nav>
                 </Styledlink>
             </Naviga>
         </Container>
@@ -43,8 +43,10 @@ export default Sidebar;
 const Container = styled.div`
     min-height: calc(100vh - 70px);
     padding-left: 20px;
+    margin-top: 80px;
 `
 const Naviga = styled.div`
+    
     /* display: flex;
     justify-content: se; */
 `
@@ -60,7 +62,7 @@ const Styledlink = styled(Link)`
         font-size: 16px;
         font-weight: 500;
         padding: 20px 0;
-        color: #000000;
+        color: #ededed;
     }
     
     
