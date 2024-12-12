@@ -100,7 +100,7 @@ const Wrapper = styled.div`
     background-image: url(${teadev});
     background-position: center;
     background-size: cover;
-    background-opacity: 0.9; /* Apply opacity */
+    opacity: 0.9; 
   }
 `;
 
@@ -124,7 +124,7 @@ const Innerwrapper = styled.div`
   }
 
   h1 {
-    font-size: 40px;
+    font-size: 36px;
     font-weight: 600;
     position: relative;
     line-height: 1.1;
@@ -203,7 +203,7 @@ const Button = styled.div`
 `;
 
 const Icons = styled.div`
-  font-size: 30px;
+  font-size: 24px;
   position: absolute;
   bottom: -100px;
   width: 200px;
