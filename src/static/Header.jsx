@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import styled, { keyframes } from 'styled-components'
 import { IoReorderTwoOutline } from "react-icons/io5";
 import Sidebar from './SideBar';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
     const [toggle, setToggle] = useState(false);
@@ -16,11 +17,11 @@ const Header = () => {
         <Innerwrapper>
             <a href="" className='logo'>teadev.</a>
             <Navlist>
-                <a href="/">Home</a>
-                <a href="/about">About</a>
-                <a href="/skills">Service</a>
-                <a href="/projects">Portfolio</a>
-                <a href="/contact">Contact</a>
+                <Link to= "/"><p>Home</p></Link>
+                <Link to= "/about"><p>About</p></Link>
+                <Link to= "/skills"><p>Skills</p></Link>
+                <Link to= "/projects"><p>Projects</p></Link>
+                <Link to= "/contact"><p>Contact</p></Link>
             </Navlist>
 
             <Sidenav onClick={handleToggle}>
@@ -48,9 +49,11 @@ const Wrapper = styled.div`
     top: 0;
     left: 0;
     width: 100%;
-    padding: 20px 10%;
+    padding: 20px 5%;
     background-color: transparent;
     z-index: 100;
+
+    
 `
 
 const Innerwrapper = styled.div`
@@ -81,18 +84,22 @@ const Innerwrapper = styled.div`
             animation-delay: .4s;
         }
 
-     
+      @media (max-width: 768px) {
+        justify-content: space-between;
+      }
     }
 
-    
 `
 
 const Navlist = styled.div`
+    display: flex;
+    align-items: center;
+
     a {
         text-decoration: none;
         color: #ededed;
         font-weight: 500;
-        margin-left: 20px;
+        margin-left: 40px;
         z-index: 100;
         font-size: 13px;
     }
